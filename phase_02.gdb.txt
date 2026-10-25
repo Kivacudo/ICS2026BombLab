@@ -1,0 +1,70 @@
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Enable debuginfod for this session? (y or [n]) [answered N; input not from terminal]
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+Dump of assembler code for function phase_02:
+   0x00000000004020f0 <+0>:	endbr64
+   0x00000000004020f4 <+4>:	push   %rbp
+   0x00000000004020f5 <+5>:	mov    %rsp,%rbp
+   0x00000000004020f8 <+8>:	push   %r13
+   0x00000000004020fa <+10>:	mov    %rsi,%r13
+   0x00000000004020fd <+13>:	mov    $0x6,%esi
+   0x0000000000402102 <+18>:	push   %r12
+   0x0000000000402104 <+20>:	mov    %rdi,%r12
+   0x0000000000402107 <+23>:	push   %rbx
+   0x0000000000402108 <+24>:	sub    $0x28,%rsp
+   0x000000000040210c <+28>:	call   0x402c60 <valid_u32_fields>
+   0x0000000000402111 <+33>:	test   %al,%al
+   0x0000000000402113 <+35>:	jne    0x402128 <phase_02+56>
+   0x0000000000402115 <+37>:	xor    %ebx,%ebx
+   0x0000000000402117 <+39>:	lea    -0x18(%rbp),%rsp
+   0x000000000040211b <+43>:	mov    %ebx,%eax
+   0x000000000040211d <+45>:	pop    %rbx
+   0x000000000040211e <+46>:	pop    %r12
+   0x0000000000402120 <+48>:	pop    %r13
+   0x0000000000402122 <+50>:	pop    %rbp
+   0x0000000000402123 <+51>:	ret
+   0x0000000000402124 <+52>:	nopl   0x0(%rax)
+   0x0000000000402128 <+56>:	mov    %eax,%ebx
+   0x000000000040212a <+58>:	lea    -0x2c(%rbp),%rax
+   0x000000000040212e <+62>:	lea    -0x3c(%rbp),%rcx
+   0x0000000000402132 <+66>:	mov    $0x40317a,%esi
+   0x0000000000402137 <+71>:	push   %rax
+   0x0000000000402138 <+72>:	lea    -0x30(%rbp),%rax
+   0x000000000040213c <+76>:	lea    -0x40(%rbp),%rdx
+   0x0000000000402140 <+80>:	mov    %r12,%rdi
+   0x0000000000402143 <+83>:	push   %rax
+   0x0000000000402144 <+84>:	lea    -0x34(%rbp),%r9
+   0x0000000000402148 <+88>:	lea    -0x38(%rbp),%r8
+   0x000000000040214c <+92>:	xor    %eax,%eax
+   0x000000000040214e <+94>:	call   0x4011e0 <__isoc99_sscanf@plt>
+   0x0000000000402153 <+99>:	pop    %rdx
+   0x0000000000402154 <+100>:	pop    %rcx
+   0x0000000000402155 <+101>:	cmp    $0x6,%eax
+   0x0000000000402158 <+104>:	jne    0x402115 <phase_02+37>
+   0x000000000040215a <+106>:	mov    %r13,%rax
+   0x000000000040215d <+109>:	mov    -0x40(%rbp),%esi
+   0x0000000000402160 <+112>:	shr    $0x1f,%rax
+   0x0000000000402164 <+116>:	add    %eax,%eax
+   0x0000000000402166 <+118>:	and    $0x3e,%eax
+   0x0000000000402169 <+121>:	add    $0x16,%eax
+   0x000000000040216c <+124>:	cmp    %eax,%esi
+   0x000000000040216e <+126>:	jne    0x402115 <phase_02+37>
+   0x0000000000402170 <+128>:	mov    $0xf,%ecx
+   0x0000000000402175 <+133>:	mov    $0x1,%edx
+   0x000000000040217a <+138>:	mov    %r13,%rax
+   0x000000000040217d <+141>:	shr    %cl,%rax
+   0x0000000000402180 <+144>:	and    $0x1f,%eax
+   0x0000000000402183 <+147>:	xor    %edx,%eax
+   0x0000000000402185 <+149>:	lea    (%rax,%rsi,2),%eax
+   0x0000000000402188 <+152>:	mov    -0x40(%rbp,%rdx,4),%esi
+   0x000000000040218c <+156>:	cmp    %eax,%esi
+   0x000000000040218e <+158>:	jne    0x402115 <phase_02+37>
+   0x0000000000402190 <+160>:	add    $0x1,%rdx
+   0x0000000000402194 <+164>:	add    $0x4,%ecx
+   0x0000000000402197 <+167>:	cmp    $0x6,%rdx
+   0x000000000040219b <+171>:	jne    0x40217a <phase_02+138>
+   0x000000000040219d <+173>:	jmp    0x402117 <phase_02+39>
+End of assembler dump.

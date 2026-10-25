@@ -1,0 +1,49 @@
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Enable debuginfod for this session? (y or [n]) [answered N; input not from terminal]
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+Dump of assembler code for function phase_03:
+   0x00000000004022b0 <+0>:	endbr64
+   0x00000000004022b4 <+4>:	push   %rbp
+   0x00000000004022b5 <+5>:	mov    %rsp,%rbp
+   0x00000000004022b8 <+8>:	push   %r12
+   0x00000000004022ba <+10>:	mov    %rsi,%r12
+   0x00000000004022bd <+13>:	mov    $0x2,%esi
+   0x00000000004022c2 <+18>:	push   %rbx
+   0x00000000004022c3 <+19>:	mov    %rdi,%rbx
+   0x00000000004022c6 <+22>:	sub    $0x10,%rsp
+   0x00000000004022ca <+26>:	call   0x402c60 <valid_u32_fields>
+   0x00000000004022cf <+31>:	test   %al,%al
+   0x00000000004022d1 <+33>:	jne    0x4022e0 <phase_03+48>
+   0x00000000004022d3 <+35>:	xor    %eax,%eax
+   0x00000000004022d5 <+37>:	add    $0x10,%rsp
+   0x00000000004022d9 <+41>:	pop    %rbx
+   0x00000000004022da <+42>:	pop    %r12
+   0x00000000004022dc <+44>:	pop    %rbp
+   0x00000000004022dd <+45>:	ret
+   0x00000000004022de <+46>:	xchg   %ax,%ax
+   0x00000000004022e0 <+48>:	xor    %eax,%eax
+   0x00000000004022e2 <+50>:	lea    -0x14(%rbp),%rcx
+   0x00000000004022e6 <+54>:	lea    -0x18(%rbp),%rdx
+   0x00000000004022ea <+58>:	mov    $0x403186,%esi
+   0x00000000004022ef <+63>:	mov    %rbx,%rdi
+   0x00000000004022f2 <+66>:	call   0x4011e0 <__isoc99_sscanf@plt>
+   0x00000000004022f7 <+71>:	cmp    $0x2,%eax
+   0x00000000004022fa <+74>:	jne    0x4022d3 <phase_03+35>
+   0x00000000004022fc <+76>:	mov    %r12d,%edi
+   0x00000000004022ff <+79>:	xor    %eax,%eax
+   0x0000000000402301 <+81>:	and    $0x7,%edi
+   0x0000000000402304 <+84>:	cmp    %edi,-0x18(%rbp)
+   0x0000000000402307 <+87>:	jne    0x4022d5 <phase_03+37>
+   0x0000000000402309 <+89>:	mov    %r12,%rax
+   0x000000000040230c <+92>:	mov    %r12,%rsi
+   0x000000000040230f <+95>:	shr    $0x3,%rax
+   0x0000000000402313 <+99>:	shr    $0x20,%rsi
+   0x0000000000402317 <+103>:	xor    %eax,%esi
+   0x0000000000402319 <+105>:	call   0x402250 <p3_dispatch>
+   0x000000000040231e <+110>:	cmp    %eax,-0x14(%rbp)
+   0x0000000000402321 <+113>:	sete   %al
+   0x0000000000402324 <+116>:	jmp    0x4022d5 <phase_03+37>
+End of assembler dump.

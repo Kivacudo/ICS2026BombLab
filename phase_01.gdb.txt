@@ -1,0 +1,43 @@
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Enable debuginfod for this session? (y or [n]) [answered N; input not from terminal]
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+Dump of assembler code for function phase_01:
+   0x0000000000402090 <+0>:	endbr64
+   0x0000000000402094 <+4>:	push   %rbp
+   0x0000000000402095 <+5>:	mov    %rsp,%rbp
+   0x0000000000402098 <+8>:	push   %r12
+   0x000000000040209a <+10>:	mov    %rsi,%r12
+   0x000000000040209d <+13>:	mov    $0x1,%esi
+   0x00000000004020a2 <+18>:	push   %rbx
+   0x00000000004020a3 <+19>:	mov    %rdi,%rbx
+   0x00000000004020a6 <+22>:	sub    $0x10,%rsp
+   0x00000000004020aa <+26>:	call   0x402c60 <valid_u32_fields>
+   0x00000000004020af <+31>:	test   %al,%al
+   0x00000000004020b1 <+33>:	jne    0x4020c0 <phase_01+48>
+   0x00000000004020b3 <+35>:	add    $0x10,%rsp
+   0x00000000004020b7 <+39>:	xor    %eax,%eax
+   0x00000000004020b9 <+41>:	pop    %rbx
+   0x00000000004020ba <+42>:	pop    %r12
+   0x00000000004020bc <+44>:	pop    %rbp
+   0x00000000004020bd <+45>:	ret
+   0x00000000004020be <+46>:	xchg   %ax,%ax
+   0x00000000004020c0 <+48>:	xor    %eax,%eax
+   0x00000000004020c2 <+50>:	lea    -0x14(%rbp),%rdx
+   0x00000000004020c6 <+54>:	mov    $0x403189,%esi
+   0x00000000004020cb <+59>:	mov    %rbx,%rdi
+   0x00000000004020ce <+62>:	call   0x4011e0 <__isoc99_sscanf@plt>
+   0x00000000004020d3 <+67>:	cmp    $0x1,%eax
+   0x00000000004020d6 <+70>:	jne    0x4020b3 <phase_01+35>
+   0x00000000004020d8 <+72>:	mov    %r12,%rdi
+   0x00000000004020db <+75>:	call   0x402050 <p1_compute>
+   0x00000000004020e0 <+80>:	cmp    %eax,-0x14(%rbp)
+   0x00000000004020e3 <+83>:	sete   %al
+   0x00000000004020e6 <+86>:	add    $0x10,%rsp
+   0x00000000004020ea <+90>:	pop    %rbx
+   0x00000000004020eb <+91>:	pop    %r12
+   0x00000000004020ed <+93>:	pop    %rbp
+   0x00000000004020ee <+94>:	ret
+End of assembler dump.

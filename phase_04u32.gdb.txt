@@ -1,0 +1,75 @@
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Enable debuginfod for this session? (y or [n]) [answered N; input not from terminal]
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+Dump of assembler code for function valid_u32_fields:
+   0x0000000000402c60 <+0>:	endbr64
+   0x0000000000402c64 <+4>:	push   %rbp
+   0x0000000000402c65 <+5>:	mov    %rsp,%rbp
+   0x0000000000402c68 <+8>:	push   %r12
+   0x0000000000402c6a <+10>:	mov    %rsi,%r12
+   0x0000000000402c6d <+13>:	push   %rbx
+   0x0000000000402c6e <+14>:	mov    %rdi,%rbx
+   0x0000000000402c71 <+17>:	call   0x401240 <__ctype_b_loc@plt>
+   0x0000000000402c76 <+22>:	xor    %r8d,%r8d
+   0x0000000000402c79 <+25>:	mov    $0xcccccccd,%edi
+   0x0000000000402c7e <+30>:	mov    (%rax),%rsi
+   0x0000000000402c81 <+33>:	movzbl (%rbx),%eax
+   0x0000000000402c84 <+36>:	test   %r12,%r12
+   0x0000000000402c87 <+39>:	je     0x402d1c <valid_u32_fields+188>
+   0x0000000000402c8d <+45>:	movzbl %al,%edx
+   0x0000000000402c90 <+48>:	testb  $0x20,0x1(%rsi,%rdx,2)
+   0x0000000000402c95 <+53>:	je     0x402cb2 <valid_u32_fields+82>
+   0x0000000000402c97 <+55>:	nopw   0x0(%rax,%rax,1)
+   0x0000000000402ca0 <+64>:	movzbl 0x1(%rbx),%edx
+   0x0000000000402ca4 <+68>:	add    $0x1,%rbx
+   0x0000000000402ca8 <+72>:	mov    %rdx,%rax
+   0x0000000000402cab <+75>:	testb  $0x20,0x1(%rsi,%rdx,2)
+   0x0000000000402cb0 <+80>:	jne    0x402ca0 <valid_u32_fields+64>
+   0x0000000000402cb2 <+82>:	sub    $0x30,%eax
+   0x0000000000402cb5 <+85>:	cmp    $0x9,%al
+   0x0000000000402cb7 <+87>:	ja     0x402ceb <valid_u32_fields+139>
+   0x0000000000402cb9 <+89>:	xor    %ecx,%ecx
+   0x0000000000402cbb <+91>:	jmp    0x402cd5 <valid_u32_fields+117>
+   0x0000000000402cbd <+93>:	nopl   (%rax)
+   0x0000000000402cc0 <+96>:	lea    (%rcx,%rcx,4),%eax
+   0x0000000000402cc3 <+99>:	add    $0x1,%rbx
+   0x0000000000402cc7 <+103>:	lea    (%rdx,%rax,2),%ecx
+   0x0000000000402cca <+106>:	movzbl (%rbx),%eax
+   0x0000000000402ccd <+109>:	lea    -0x30(%rax),%edx
+   0x0000000000402cd0 <+112>:	cmp    $0x9,%dl
+   0x0000000000402cd3 <+115>:	ja     0x402cf8 <valid_u32_fields+152>
+   0x0000000000402cd5 <+117>:	movzbl (%rbx),%edx
+   0x0000000000402cd8 <+120>:	sub    $0x30,%edx
+   0x0000000000402cdb <+123>:	mov    %edx,%eax
+   0x0000000000402cdd <+125>:	not    %eax
+   0x0000000000402cdf <+127>:	imul   %rdi,%rax
+   0x0000000000402ce3 <+131>:	shr    $0x23,%rax
+   0x0000000000402ce7 <+135>:	cmp    %ecx,%eax
+   0x0000000000402ce9 <+137>:	jae    0x402cc0 <valid_u32_fields+96>
+   0x0000000000402ceb <+139>:	xor    %eax,%eax
+   0x0000000000402ced <+141>:	pop    %rbx
+   0x0000000000402cee <+142>:	pop    %r12
+   0x0000000000402cf0 <+144>:	pop    %rbp
+   0x0000000000402cf1 <+145>:	ret
+   0x0000000000402cf2 <+146>:	nopw   0x0(%rax,%rax,1)
+   0x0000000000402cf8 <+152>:	test   %al,%al
+   0x0000000000402cfa <+154>:	je     0x402d06 <valid_u32_fields+166>
+   0x0000000000402cfc <+156>:	movzbl %al,%edx
+   0x0000000000402cff <+159>:	testb  $0x20,0x1(%rsi,%rdx,2)
+   0x0000000000402d04 <+164>:	je     0x402ceb <valid_u32_fields+139>
+   0x0000000000402d06 <+166>:	add    $0x1,%r8
+   0x0000000000402d0a <+170>:	cmp    %r8,%r12
+   0x0000000000402d0d <+173>:	jne    0x402c8d <valid_u32_fields+45>
+   0x0000000000402d13 <+179>:	jmp    0x402d1c <valid_u32_fields+188>
+   0x0000000000402d15 <+181>:	nopl   (%rax)
+   0x0000000000402d18 <+184>:	add    $0x1,%rbx
+   0x0000000000402d1c <+188>:	movzbl (%rbx),%edx
+   0x0000000000402d1f <+191>:	testb  $0x20,0x1(%rsi,%rdx,2)
+   0x0000000000402d24 <+196>:	jne    0x402d18 <valid_u32_fields+184>
+   0x0000000000402d26 <+198>:	test   %dl,%dl
+   0x0000000000402d28 <+200>:	sete   %al
+   0x0000000000402d2b <+203>:	jmp    0x402ced <valid_u32_fields+141>
+End of assembler dump.

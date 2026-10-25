@@ -1,0 +1,37 @@
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Enable debuginfod for this session? (y or [n]) [answered N; input not from terminal]
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+Dump of assembler code for function p5_traverse:
+   0x0000000000402420 <+0>:	endbr64
+   0x0000000000402424 <+4>:	mov    %rdi,%rax
+   0x0000000000402427 <+7>:	mov    %rdi,%rcx
+   0x000000000040242a <+10>:	mov    %rsi,%r8
+   0x000000000040242d <+13>:	and    $0x7,%eax
+   0x0000000000402430 <+16>:	shr    $0x3,%rcx
+   0x0000000000402434 <+20>:	mov    0x405b60(,%rax,8),%rdx
+   0x000000000040243c <+28>:	mov    %rdi,%rax
+   0x000000000040243f <+31>:	shr    $0x20,%rdi
+   0x0000000000402443 <+35>:	shr    $0x6,%rax
+   0x0000000000402447 <+39>:	mov    0x8(%rdx),%esi
+   0x000000000040244a <+42>:	xor    %edi,%eax
+   0x000000000040244c <+44>:	xor    0xc(%rdx),%eax
+   0x000000000040244f <+47>:	mov    %ecx,%edi
+   0x0000000000402451 <+49>:	xor    $0x8016,%eax
+   0x0000000000402456 <+54>:	mov    %esi,(%r8)
+   0x0000000000402459 <+57>:	add    %esi,%eax
+   0x000000000040245b <+59>:	and    $0x3,%edi
+   0x000000000040245e <+62>:	je     0x40247a <p5_traverse+90>
+   0x0000000000402460 <+64>:	mov    $0x1,%ecx
+   0x0000000000402465 <+69>:	mov    (%rdx),%rdx
+   0x0000000000402468 <+72>:	add    $0x1,%ecx
+   0x000000000040246b <+75>:	mov    0x8(%rdx),%esi
+   0x000000000040246e <+78>:	xor    0xc(%rdx),%eax
+   0x0000000000402471 <+81>:	add    %esi,%eax
+   0x0000000000402473 <+83>:	mov    %esi,(%r8)
+   0x0000000000402476 <+86>:	cmp    %ecx,%edi
+   0x0000000000402478 <+88>:	jae    0x402465 <p5_traverse+69>
+   0x000000000040247a <+90>:	ret
+End of assembler dump.

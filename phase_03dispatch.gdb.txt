@@ -1,0 +1,32 @@
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Enable debuginfod for this session? (y or [n]) [answered N; input not from terminal]
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+Dump of assembler code for function p3_dispatch:
+   0x0000000000402250 <+0>:	endbr64
+   0x0000000000402254 <+4>:	mov    %edi,%eax
+   0x0000000000402256 <+6>:	mov    %esi,%edi
+   0x0000000000402258 <+8>:	cmp    $0x7,%eax
+   0x000000000040225b <+11>:	ja     0x4022a5 <p3_dispatch+85>
+   0x000000000040225d <+13>:	notrack jmp *0x405820(,%rax,8)
+   0x0000000000402265 <+21>:	nopl   (%rax)
+   0x0000000000402268 <+24>:	jmp    0x4021c0 <p3_case_1>
+   0x000000000040226d <+29>:	nopl   (%rax)
+   0x0000000000402270 <+32>:	jmp    0x4021e0 <p3_case_3>
+   0x0000000000402275 <+37>:	nopl   (%rax)
+   0x0000000000402278 <+40>:	jmp    0x402210 <p3_case_5>
+   0x000000000040227a <+42>:	nopw   0x0(%rax,%rax,1)
+   0x0000000000402280 <+48>:	jmp    0x402230 <p3_case_6>
+   0x0000000000402282 <+50>:	nopw   0x0(%rax,%rax,1)
+   0x0000000000402288 <+56>:	jmp    0x402240 <p3_case_7>
+   0x000000000040228a <+58>:	nopw   0x0(%rax,%rax,1)
+   0x0000000000402290 <+64>:	jmp    0x4021d0 <p3_case_2>
+   0x0000000000402295 <+69>:	nopl   (%rax)
+   0x0000000000402298 <+72>:	jmp    0x4021b0 <p3_case_0>
+   0x000000000040229d <+77>:	nopl   (%rax)
+   0x00000000004022a0 <+80>:	jmp    0x4021f0 <p3_case_4>
+   0x00000000004022a5 <+85>:	xor    %eax,%eax
+   0x00000000004022a7 <+87>:	ret
+End of assembler dump.

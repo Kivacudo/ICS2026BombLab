@@ -1,0 +1,51 @@
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Enable debuginfod for this session? (y or [n]) [answered N; input not from terminal]
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+Dump of assembler code for function phase_04:
+   0x00000000004023a0 <+0>:	endbr64
+   0x00000000004023a4 <+4>:	push   %rbp
+   0x00000000004023a5 <+5>:	mov    %rsp,%rbp
+   0x00000000004023a8 <+8>:	push   %r12
+   0x00000000004023aa <+10>:	mov    %rsi,%r12
+   0x00000000004023ad <+13>:	mov    $0x1,%esi
+   0x00000000004023b2 <+18>:	push   %rbx
+   0x00000000004023b3 <+19>:	mov    %rdi,%rbx
+   0x00000000004023b6 <+22>:	sub    $0x10,%rsp
+   0x00000000004023ba <+26>:	call   0x402c60 <valid_u32_fields>
+   0x00000000004023bf <+31>:	test   %al,%al
+   0x00000000004023c1 <+33>:	jne    0x4023d0 <phase_04+48>
+   0x00000000004023c3 <+35>:	add    $0x10,%rsp
+   0x00000000004023c7 <+39>:	xor    %eax,%eax
+   0x00000000004023c9 <+41>:	pop    %rbx
+   0x00000000004023ca <+42>:	pop    %r12
+   0x00000000004023cc <+44>:	pop    %rbp
+   0x00000000004023cd <+45>:	ret
+   0x00000000004023ce <+46>:	xchg   %ax,%ax
+   0x00000000004023d0 <+48>:	xor    %eax,%eax
+   0x00000000004023d2 <+50>:	lea    -0x14(%rbp),%rdx
+   0x00000000004023d6 <+54>:	mov    $0x403189,%esi
+   0x00000000004023db <+59>:	mov    %rbx,%rdi
+   0x00000000004023de <+62>:	call   0x4011e0 <__isoc99_sscanf@plt>
+   0x00000000004023e3 <+67>:	cmp    $0x1,%eax
+   0x00000000004023e6 <+70>:	jne    0x4023c3 <phase_04+35>
+   0x00000000004023e8 <+72>:	mov    %r12,%rcx
+   0x00000000004023eb <+75>:	mov    %r12,%rax
+   0x00000000004023ee <+78>:	mov    %r12d,%edi
+   0x00000000004023f1 <+81>:	xor    %esi,%esi
+   0x00000000004023f3 <+83>:	shr    $0x20,%rax
+   0x00000000004023f7 <+87>:	shr    $0x7,%rcx
+   0x00000000004023fb <+91>:	and    $0x7f,%edi
+   0x00000000004023fe <+94>:	mov    $0x7f,%edx
+   0x0000000000402403 <+99>:	xor    %eax,%ecx
+   0x0000000000402405 <+101>:	call   0x402330 <p4_walk>
+   0x000000000040240a <+106>:	cmp    %eax,-0x14(%rbp)
+   0x000000000040240d <+109>:	sete   %al
+   0x0000000000402410 <+112>:	add    $0x10,%rsp
+   0x0000000000402414 <+116>:	pop    %rbx
+   0x0000000000402415 <+117>:	pop    %r12
+   0x0000000000402417 <+119>:	pop    %rbp
+   0x0000000000402418 <+120>:	ret
+End of assembler dump.
