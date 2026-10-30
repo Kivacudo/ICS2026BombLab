@@ -1,0 +1,42 @@
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Enable debuginfod for this session? (y or [n]) [answered N; input not from terminal]
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+Dump of assembler code from 0x402020 to 0x402086:
+   0x0000000000402020 <p1_step0+0>:	endbr64
+   0x0000000000402024 <p1_step0+4>:	sub    %esi,%edi
+   0x0000000000402026 <p1_step0+6>:	lea    0x4a3b(%rdi,%rdi,2),%eax
+   0x000000000040202d <p1_step0+13>:	ret
+   0x000000000040202e:	xchg   %ax,%ax
+   0x0000000000402030 <p1_step1+0>:	endbr64
+   0x0000000000402034 <p1_step1+4>:	lea    (%rdi,%rdi,2),%eax
+   0x0000000000402037 <p1_step1+7>:	add    $0xb7e3,%esi
+   0x000000000040203d <p1_step1+13>:	xor    %esi,%eax
+   0x000000000040203f <p1_step1+15>:	ret
+   0x0000000000402040 <p1_step2+0>:	endbr64
+   0x0000000000402044 <p1_step2+4>:	lea    (%rdi,%rsi,2),%eax
+   0x0000000000402047 <p1_step2+7>:	xor    $0xc9d2,%eax
+   0x000000000040204c <p1_step2+12>:	ret
+   0x000000000040204d:	nopl   (%rax)
+   0x0000000000402050 <p1_compute+0>:	endbr64
+   0x0000000000402054 <p1_compute+4>:	push   %rbp
+   0x0000000000402055 <p1_compute+5>:	mov    %rdi,%rdx
+   0x0000000000402058 <p1_compute+8>:	mov    %rdi,%rax
+   0x000000000040205b <p1_compute+11>:	shr    $0x20,%rax
+   0x000000000040205f <p1_compute+15>:	mov    %rdx,%rsi
+   0x0000000000402062 <p1_compute+18>:	mov    %eax,%edi
+   0x0000000000402064 <p1_compute+20>:	shr    $0x10,%rsi
+   0x0000000000402068 <p1_compute+24>:	mov    %rsp,%rbp
+   0x000000000040206b <p1_compute+27>:	call   0x402030 <p1_step1>
+   0x0000000000402070 <p1_compute+32>:	mov    %edi,%esi
+   0x0000000000402072 <p1_compute+34>:	mov    %edx,%edi
+   0x0000000000402074 <p1_compute+36>:	mov    %eax,%ecx
+   0x0000000000402076 <p1_compute+38>:	call   0x402020 <p1_step0>
+   0x000000000040207b <p1_compute+43>:	mov    %ecx,%esi
+   0x000000000040207d <p1_compute+45>:	mov    %eax,%edi
+   0x000000000040207f <p1_compute+47>:	call   0x402040 <p1_step2>
+   0x0000000000402084 <p1_compute+52>:	pop    %rbp
+   0x0000000000402085 <p1_compute+53>:	ret
+End of assembler dump.
